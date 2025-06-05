@@ -94,24 +94,35 @@ footer {
 
 .fixed-bottom-left {
     position: fixed;
-    bottom: 6em;
-    left: 2em;
+    bottom: 5vh;
+    left: 5vw;
     z-index: 900;
 }
 
 .fixed-bottom-right {
     position: fixed;
-    bottom: 3em;
-    right: 1em;
+    bottom: 3vh;
+    right: 3vw;
     z-index: 900;
 }
 
 .fixed-mid {
     position: fixed;
-    bottom: 5;
+    bottom: 10vh;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .fixed-bottom-left,
+    .fixed-bottom-right,
+    .fixed-mid {
+        position: static;
+        display: block;
+        margin: 1em auto;
+        text-align: center;
+    }
 }
 
 .hero-text {
