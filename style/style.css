@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 /* Structure de base pour fixer le footer */
 html, body {
     height: 100%;
@@ -310,69 +315,58 @@ body {
 }
 
 
-/* --- Responsive Updates --- */
-
-/* General Reset and Mobile Responsiveness */
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    line-height: 1.5;
-    font-family: 'Cherry Bomb One', cursive;
-    background-color: #dbcfd2;
-    background-image: url('../images/background-panda.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Make text more readable */
-.hero-text h1,
-.hero-text p,
-.section-title,
-p, ul, li, h2, h3 {
-    font-size: 1.1rem;
-}
-
+/* Responsive mobile - iPhone 11 and similar */
 @media (max-width: 768px) {
-    header nav a {
-        display: block;
-        margin: 0.5em 0;
-        text-align: center;
-    }
+  body {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
 
-    .hero-text h1 {
-        font-size: 1.8rem;
-        text-align: center;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+  }
 
-    .subtitle {
-        font-size: 1.2rem;
-        text-align: center;
-    }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 
-    .grid-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+  .hero-text h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 
-    .menu-item {
-        width: 90%;
-        margin-bottom: 1.5em;
-    }
+  .hero-text .subtitle {
+    font-size: 1rem;
+  }
 
-    .cta-button {
-        font-size: 1rem;
-        padding: 0.8em 1.2em;
-    }
+  .grid-menu {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-    footer p {
-        font-size: 0.9rem;
-        text-align: center;
-    }
+  .menu-item {
+    padding: 1rem;
+    text-align: center;
+  }
 
-    body {
-        background-attachment: scroll;
-    }
+  .menu-item img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
