@@ -308,3 +308,71 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(2px);
 }
+
+
+/* --- Responsive Updates --- */
+
+/* General Reset and Mobile Responsiveness */
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Cherry Bomb One', cursive;
+    background-color: #dbcfd2;
+    background-image: url('../images/background-panda.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Make text more readable */
+.hero-text h1,
+.hero-text p,
+.section-title,
+p, ul, li, h2, h3 {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .grid-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 90%;
+        margin-bottom: 1.5em;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.8em 1.2em;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    body {
+        background-attachment: scroll;
+    }
+}
