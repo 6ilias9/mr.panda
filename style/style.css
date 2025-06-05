@@ -1,343 +1,178 @@
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-/* Structure de base pour fixer le footer */
+
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #fff4f7;
-    color: #333;
-}
-
-/* Le contenu principal doit prendre toute la hauteur restante */
-main {
-    flex: 1;
-    text-align: center;
-    padding: 3em 1em;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fff4f7;
+  color: #333;
+  background-image: url("../images/background-panda.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
 }
 
 header {
-    background-color: #ffdde1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em 2em;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-nav a {
-    margin: 0 1em;
-    text-decoration: none;
-    color: #6b4c4c;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ff69b4;
-}
-
-h1 {
-    font-size: 2.5em;
-    color: #ff66a5;
-}
-
-p {
-    font-size: 1.2em;
-    margin-top: 1em;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 2em;
-    padding: 1em 2em;
-    background-color: #ffb6c1;
-    color: white;
-    font-size: 1.2em;
-    border-radius: 25px;
-    text-decoration: none;
-    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s;
-}
-
-
-.cta-button:hover {
-    background-color: #ff69b4;
-}
-
-footer {
-    text-align: center;
-    background-color: #ffe5ec;
-    padding: 1em;
-    font-size: 0.9em;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
-}
-
-.panda-deco {
-    width: 150px;
-    margin-top: 2em;
-    animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+  background-color: #ffdde1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 main {
-    position: relative; /* Nécessaire pour que les éléments absolus soient contenus */
+  flex: 1;
+  min-height: 60vh;
+  position: relative;
+  text-align: center;
+  padding: 3em 1em;
 }
 
-/* Positionnement relatif à la section main */
-.fixed-bottom-left {
-    position: absolute;
-    bottom: 6em; /* distance par rapport au bas de main */
-    left: 5vw;
-    z-index: 900;
+footer {
+  text-align: center;
+  background-color: #ffe5ec;
+  padding: 1em;
+  font-size: 0.9em;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.05);
 }
 
-.fixed-bottom-right {
-    position: absolute;
-    bottom: 3em;
-    right: 3vw;
-    z-index: 900;
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: #6b4c4c;
+  font-weight: bold;
 }
 
-.fixed-mid {
-    position: absolute;
-    bottom: 10em;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
+nav a:hover {
+  color: #ff69b4;
 }
 
-@media (max-width: 768px) {
-    .fixed-bottom-left,
-    .fixed-bottom-right,
-    .fixed-mid {
-        position: static;
-        display: block;
-        margin: 1em auto;
-        text-align: center;
-    }
-
-    .fixed-mid {
-        transform: none;
-    }
+h1 {
+  font-size: 2.5em;
+  color: #ff66a5;
 }
 
-
-
-.hero-text {
-    text-align: center;
-    margin-top: 3em;
-    padding: 0 1em;
+p {
+  font-size: 1.2em;
+  margin-top: 1em;
 }
 
-.hero-text h1 {
-    font-family: 'Cherry Bomb One', cursive;
-    font-size: 3.5em;
-    color: #ffffff;
-    margin-bottom: 0.3em;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+.cta-button {
+  display: inline-block;
+  margin-top: 2em;
+  padding: 1em 2em;
+  background-color: #ffb6c1;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
 }
 
-.hero-text .subtitle {
-    font-size: 1.5em;
-    color: #ffffff;
-    margin-top: 0;
-}
-.inline-icon {
-    height: 1.2em;
-    vertical-align: middle;
-    margin-right: 0.3em;
+.cta-button:hover {
+  background-color: #ff69b4;
 }
 
-body {
-    position: relative;
-    background-image: url("../images/background-panda.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    display: flex;
-    flex-direction: column;
-    color: #333;
+.panda-deco {
+  width: 150px;
+  margin-top: 2em;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.40); /* Blanc transparent (atténue l'image) */
-    z-index: -1; /* Derrière tout le reste */
-}
-
-.hero-text {
-    text-align: center;
-    margin: 4em auto;
-    padding: 2em;
-    max-width: 600px;
-    background-color: #ffb6c1; /* même couleur que le bouton */
-    border-radius: 30px;
-    box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    color: white;
-}
-
-.hero-text h1 {
-    font-family: 'Cherry Bomb One', cursive;
-    font-size: 3.2em;
-    margin-bottom: 0.3em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.hero-text h1,
-.hero-text .subtitle {
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-}
-
-
-.hero-text .subtitle {
-    font-size: 1.5em;
-    margin-top: 0.5em;
-}
-.subtitle {
-    font-weight: bold;
-}
-
-    section {
-      padding: 3em 1.5em;
-      margin: 2em 0;
-      border-radius: 20px;
-    }
-    .section-special {
-      background: linear-gradient(135deg, #ffe4ec, #ffdce0);
-    }
-    .section-fruit {
-      background: linear-gradient(135deg, #fce8f2, #f9dff0);
-    }
-    .section-milk {
-      background: linear-gradient(135deg, #f9f0ff, #efe2fa);
-    }
-    .section-supp {
-      background: linear-gradient(135deg, #f4f4f4, #eaeaea);
-    }
-    .section-title {
-      font-size: 1.8em;
-      margin-bottom: 0.5em;
-    }
-    .grid-menu {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5em;
-      justify-content: center;
-    }
-    .menu-item {
-      max-width: 220px;
-      text-align: center;
-    }
-    .menu-item img {
-      width: 100%;
-      border-radius: 15px;
-    }
-
-    .menu-item {
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-.menu-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-color: #ffb6c1;
-}
-
-/* Popup overlay */
-.popup-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.40);
+  z-index: -1;
+  background-image: url('../images/background-panda.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.fixed-bottom-left {
+  position: absolute;
+  bottom: 6em;
+  left: 5vw;
+  z-index: 900;
+}
+
+.fixed-bottom-right {
+  position: absolute;
+  bottom: 3em;
+  right: 3vw;
+  z-index: 900;
+}
+
+.fixed-mid {
+  position: absolute;
+  bottom: 10em;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1000;
 }
 
-.popup-content {
-  background: #fff;
-  padding: 2em;
-  border-radius: 20px;
+.hero-text {
   text-align: center;
-  position: relative;
-  transform: scale(1.2);
-  width: 60%;
-  max-width: 500px;
-}
-
-.popup-content img {
-  max-width: 100%;
-  border-radius: 15px;
-}
-
-.close-btn {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  background: #ffb6c1;
+  margin: 4em auto;
+  padding: 2em;
+  max-width: 600px;
+  background-color: #ffb6c1;
+  border-radius: 30px;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
   color: white;
-  padding: 0.3em 0.5em;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.2em;
 }
 
-@keyframes kawaii-pop {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.05); }
-  60% { transform: scale(0.95); }
-  100% { transform: scale(1); }
+.hero-text h1 {
+  font-family: 'Cherry Bomb One', cursive;
+  font-size: 3.2em;
+  margin-bottom: 0.3em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.kawaii-click.clicked {
-  animation: kawaii-pop 0.4s ease;
+.hero-text .subtitle {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
-.hover-animate {
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  border-radius: 15px;
-  padding: 1em;
+.inline-icon {
+  height: 1.2em;
+  vertical-align: middle;
+  margin-right: 0.3em;
 }
 
-.hover-animate:hover {
-  transform: scale(1.03);
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(2px);
-}
-
-
-/* Responsive mobile - iPhone 11 and similar */
+/* Responsive Mobile */
 @media (max-width: 768px) {
   body {
     font-size: 1rem;
@@ -367,24 +202,17 @@ body {
     font-size: 1rem;
   }
 
-  .grid-menu {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .menu-item {
-    padding: 1rem;
+  .fixed-bottom-left,
+  .fixed-bottom-right,
+  .fixed-mid {
+    position: static;
+    display: block;
+    margin: 1em auto;
     text-align: center;
   }
 
-  .menu-item img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .cta-button {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
+  .fixed-mid {
+    transform: none;
   }
 
   footer p {
@@ -392,15 +220,3 @@ body {
     text-align: center;
   }
 }
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/background-panda.png'); /* adapte le chemin */
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
