@@ -114,7 +114,7 @@ main {
 .fixed-mid {
     position: absolute;
     bottom: 10em;
-    left: 50%;
+    left: 90%;
     transform: translateX(-50%);
     z-index: 1000;
 }
