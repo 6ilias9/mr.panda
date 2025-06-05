@@ -119,7 +119,6 @@ main {
     z-index: 1000;
 }
 
-/* Adaptation mobile */
 @media (max-width: 768px) {
     .fixed-bottom-left,
     .fixed-bottom-right,
@@ -129,7 +128,12 @@ main {
         margin: 1em auto;
         text-align: center;
     }
+
+    .fixed-mid {
+        transform: none;
+    }
 }
+
 
 
 .hero-text {
