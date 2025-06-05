@@ -92,28 +92,34 @@ footer {
     50% { transform: translateY(-10px); }
 }
 
+main {
+    position: relative; /* Nécessaire pour que les éléments absolus soient contenus */
+}
+
+/* Positionnement relatif à la section main */
 .fixed-bottom-left {
-    position: fixed;
-    bottom: 5vh;
+    position: absolute;
+    bottom: 6em; /* distance par rapport au bas de main */
     left: 5vw;
     z-index: 900;
 }
 
 .fixed-bottom-right {
-    position: fixed;
-    bottom: 3vh;
+    position: absolute;
+    bottom: 3em;
     right: 3vw;
     z-index: 900;
 }
 
 .fixed-mid {
-    position: fixed;
-    bottom: 10vh;
+    position: absolute;
+    bottom: 10em;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
 }
 
+/* Adaptation mobile */
 @media (max-width: 768px) {
     .fixed-bottom-left,
     .fixed-bottom-right,
@@ -124,6 +130,7 @@ footer {
         text-align: center;
     }
 }
+
 
 .hero-text {
     text-align: center;
