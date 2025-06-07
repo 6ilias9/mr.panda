@@ -416,3 +416,22 @@ h1, h2, .hero-text h1 {
   font-family: 'Pacifico', cursive;
 }
 
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+/* Responsive : empile les boutons verticalement */
+@media (max-width: 768px) {
+  .button-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
+
