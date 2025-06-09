@@ -434,4 +434,22 @@ h1, h2, .hero-text h1 {
   }
 }
 
+.popin {
+  animation: pop-in 0.6s ease-out forwards;
+  transform-origin: center;
+}
+
+@keyframes pop-in {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
